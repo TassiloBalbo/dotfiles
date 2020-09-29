@@ -1,0 +1,45 @@
+# sys
+systemd-boot x refind
+awesome
+lightdm
+lightdm-webkit2-greeter
+lightdm-webkit-theme-aether
+picom
+yay
+networkmanager
+ufw
+man
+pulseaudio
+rxvt-unicode
+sudo
+wget
+curl
+xorg-server
+xorg-xinit
+
+# urxvt-ext
+urxvt-tabbedex
+urxvt-resize-font-git
+
+# basic
+firefox
+pacmanfm
+rofi
+visual-studios-code-bin
+neofetch
+shell-color-scripts
+
+# fonts
+terminus-font
+ttf-hack
+ttf-ms-fonts
+ttf-fira-mono
+ttf-fira-code
+ttf-monoki
+ttf-opensans
+ttf-roboto
+ttf-google-fonts-git
+ttf-tahoma
+gnu-free-fonts
+noto-fonts
+noto-fonts-emoji
