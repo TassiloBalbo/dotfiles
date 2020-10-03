@@ -4,7 +4,7 @@
 #
 
 export PATH="$HOME/.scripts:$PATH"
-export TERM="urxvt"
+#export TERM="urxvt"
 export EDITOR="nano"
 
 # if not running interactively, don't do anything

@@ -9,7 +9,7 @@ URxvt.depth: 24
 URxvt.iso14755: false
 
 URxvt.perl-lib: /usr/lib/urxvt/perl/
-URxvt.perl-ext-common: default,matcher,resize-font,tabbedex
+URxvt.perl-ext-common: default,matcher,resize-font
 URxvt.matcher.button: 1
 URxvt.url-launcher: /usr/bin/firefox
 URxvt.underlineURLs: true
@@ -18,44 +18,44 @@ URxvt.resize-font.smaller: C-j
 URxvt.resize-font.bigger: C-k
 URxvt.resize-font.reset: C-r
 
-!! Colorscheme
+!! Colorscheme (Nord)
 
 ! special
-*.foreground: #93a1a1
-*.background: [90]#141c21
-*.cursorColor: #afbfbf
+*.foreground: #D8DEE9
+*.background: #2E3440
+*.cursorColor: #D8DEE9
 
 ! black
-*.color0: #263640
-*.color8: #4a697d
+*.color0: #3B4252
+*.color8: #4C566A
 
 ! red
-*.color1: #d12f2c
-*.color9: #fa3935
+*.color1: #BF616A
+*.color9: #BF616A
 
 ! green
-*.color2: #819400
-*.color10: #a4bd00
+*.color2: #A3BE8C
+*.color10: #A3BE8C
 
 ! yellow
-*.color3: #b08500
-*.color11: #d9a400
+*.color3: #EBCB8B
+*.color11: #EBCB8B
 
 ! blue
-*.color4: #2587cc
-*.color12: #2ca2f5
+*.color4: #81A1C1
+*.color12: #81A1C1
 
 ! magenta
-*.color5: #696ebf
-*.color13: #8086e8
+*.color5: #B48EAD
+*.color13: #B48EAD
 
 ! cyan
-*.color6: #289c93
-*.color14: #33c5ba
+*.color6: #88C0D0
+*.color14: #8FBCBB
 
 ! white
-*.color7: #bfbaac
-*.color15: #fdf6e3
+*.color7: #E5E9F0
+*.color15: #ECEFF4
 
 !! Common Keybinds for Navigations
 URxvt.keysym.Shift-Up: command:\033]720;1\007
