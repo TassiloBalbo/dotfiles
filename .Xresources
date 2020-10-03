@@ -1,0 +1,62 @@
+URxvt.font: xft:Hack:size=10
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.cursorColor: white
+URxvt.cursorBlink: true
+URxvt.saveline: 2048
+URxvt.internalBorder: 24
+URxvt.depth: 24
+URxvt.iso14755: false
+
+URxvt.perl-lib: /usr/lib/urxvt/perl/
+URxvt.perl-ext-common: default,matcher,resize-font,tabbedex
+URxvt.matcher.button: 1
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.underlineURLs: true
+
+URxvt.resize-font.smaller: C-j
+URxvt.resize-font.bigger: C-k
+URxvt.resize-font.reset: C-r
+
+!! Colorscheme
+
+! special
+*.foreground: #93a1a1
+*.background: [90]#141c21
+*.cursorColor: #afbfbf
+
+! black
+*.color0: #263640
+*.color8: #4a697d
+
+! red
+*.color1: #d12f2c
+*.color9: #fa3935
+
+! green
+*.color2: #819400
+*.color10: #a4bd00
+
+! yellow
+*.color3: #b08500
+*.color11: #d9a400
+
+! blue
+*.color4: #2587cc
+*.color12: #2ca2f5
+
+! magenta
+*.color5: #696ebf
+*.color13: #8086e8
+
+! cyan
+*.color6: #289c93
+*.color14: #33c5ba
+
+! white
+*.color7: #bfbaac
+*.color15: #fdf6e3
+
+!! Common Keybinds for Navigations
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
