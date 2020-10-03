@@ -1,0 +1,4 @@
+configuration {
+	theme: "~/.config/rofi/themes/theme.rasi";
+	font: "Hack 10";
+}

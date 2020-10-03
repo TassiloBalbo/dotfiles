@@ -1,0 +1,7 @@
+#!/bin/bash
+
+curl -s https://corona-stats.online/cz |
+	sed "s/\x1b\[[0-9]*m//g" |
+	grep "Czechia" |
+	sed "s/\s*//g ; s/║//g ; s/│/;/g ; s/▲//g" |
+	awk -F';' '{print $4}'
