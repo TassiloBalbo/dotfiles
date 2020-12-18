@@ -5,7 +5,8 @@ URxvt.cursorColor: white
 URxvt.cursorBlink: true
 URxvt.saveline: 2048
 URxvt.internalBorder: 24
-URxvt.depth: 24
+URxvt.depth: 32
+URxvt.background: [85]#30333d
 URxvt.iso14755: false
 
 URxvt.perl-lib: /usr/lib/urxvt/perl/
@@ -21,41 +22,41 @@ URxvt.resize-font.reset: C-r
 !! Colorscheme (Nord)
 
 ! special
-*.foreground: #D8DEE9
-*.background: #2E3440
-*.cursorColor: #D8DEE9
+*.foreground: #ffffff
+*.background: #30333d
+*.cursorColor: #fca2aa
 
 ! black
-*.color0: #3B4252
-*.color8: #4C566A
+*.color0: #292b34
+*.color8: #585e74
 
 ! red
-*.color1: #BF616A
-*.color9: #BF616A
+*.color1: #f9929b
+*.color9: #fca2aa
 
 ! green
-*.color2: #A3BE8C
-*.color10: #A3BE8C
+*.color2: #7ed491
+*.color10: #a5d4af
 
 ! yellow
-*.color3: #EBCB8B
-*.color11: #EBCB8B
+*.color3: #fbdf90
+*.color11: #fbeab9
 
 ! blue
-*.color4: #81A1C1
-*.color12: #81A1C1
+*.color4: #a3b8ef
+*.color12: #bac8ef
 
 ! magenta
-*.color5: #B48EAD
-*.color13: #B48EAD
+*.color5: #ccaced
+*.color13: #d7c1ed
 
 ! cyan
-*.color6: #88C0D0
-*.color14: #8FBCBB
+*.color6: #9ce5c0
+*.color14: #c7e5d6
 
 ! white
-*.color7: #E5E9F0
-*.color15: #ECEFF4
+*.color7: #ffffff
+*.color15: #eaeaea
 
 !! Common Keybinds for Navigations
 URxvt.keysym.Shift-Up: command:\033]720;1\007

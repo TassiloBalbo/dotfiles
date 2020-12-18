@@ -6,6 +6,8 @@
 export PATH="$HOME/.scripts:$PATH"
 #export TERM="urxvt"
 export EDITOR="nano"
+export GUI_EDITOR="code"
+export BROWSER="brave"
 
 # if not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -14,7 +16,29 @@ alias ls='ls --color=auto'
 
 ### bash prompt
 #PS1='[\u@\h \W]\$ '
-PS1='\[\033[36m\]\w \[\033[35m\]>> \[\033[37m\]'
+#PS1='\[\033[36m\]\w \[\033[35m\]>> \[\033[37m\]'
+PS2='\[\033[35m\]>> \[\033[37m\]'
+parse_git_dirty () {
+	[[ $(git status 2> /dev/null | tail -1) != "nothing to commit, working tree clean" ]] && echo "*"
+}
+
+parse_git_branch () {
+	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+}
+
+show_git_prompt () {
+	git branch 2>/dev/null 1>&2 && echo -e "-( \e[36;1m$(parse_git_branch)\e[35;1m )"
+}
+
+if [[ -n $(type -t git) ]] ; then
+	PS1="\$(show_git_prompt)"
+else
+	PS1=
+fi
+
+PS1="
+\[\033[35m\]┌────[ \[\e[32;1m\]\u\[\033[35m\] :: \[\e[36;1m\]\h\[\033[35m\] ]─( \[\e[31;1m\]λ\[\033[35m\] )─[ \[\e[32;1m\]\w\[\033[35m\] ]$PS1
+\[\033[35m\]└── \[\033[36m\]>> \[\e[0m\]"
 
 ### archive extraction
 # usage: ex <file>
@@ -59,9 +83,9 @@ alias yaysyu="yay -Syu --noconfirm"
 alias grep='grep --color=auto'
 
 # confirm before overwriting something
-alias cp="cp -i"
-alias mv='mv -i'
-alias rm='rm -i'
+# alias cp="cp -i"
+# alias mv='mv -i'
+# alias rm='rm -i'
 
 # get top process eating memory
 alias psmem='ps auxf | sort -nr -k 4'
@@ -74,6 +98,7 @@ alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 # shutdown or reboot
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
+alias logout="light-locker-command -l"
 
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
@@ -100,4 +125,4 @@ alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 ## random color script
-/opt/shell-color-scripts/colorscript.sh random
+~/.scripts/colorscript/colorscript.sh random
