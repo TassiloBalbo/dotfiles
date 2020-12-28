@@ -25,6 +25,9 @@ EndSection
 list input devices using `xinput list`
 
 change sensitivity using:
-<code>
+<pre>
 xinput set-prop 8 156 <b>0.65</b> 0 0 0 <b>0.65</b> 0 0 0 1
-</code>
+</pre>
+<pre>
+xinput set-prop [Device ID] [Property ID] <b>[X Speed]</b> 0 0 0 <b>[Y Speed]</b> 0 0 0 1
+</pre>
