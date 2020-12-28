@@ -19,3 +19,12 @@ Section "InputClass"
 	Option "AccelSpeed" "-1"
 EndSection
 ```
+
+## Changing mouse speed
+
+list input devices using `xinput list`
+
+change sensitivity using:
+<code>
+xinput set-prop 8 156 <b>0.65</b> 0 0 0 <b>0.65</b> 0 0 0 1
+</code>
