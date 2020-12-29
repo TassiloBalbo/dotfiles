@@ -26,7 +26,7 @@ list input devices using `xinput list`
 
 change sensitivity using:
 <pre>
-xinput set-prop 8 156 <b>0.65</b> 0 0 0 <b>0.65</b> 0 0 0 1
+xinput set-prop 8 156 <b>1.5</b> 0 0 0 <b>1.5</b> 0 0 0 1
 </pre>
 <pre>
 xinput set-prop [Device ID] 156 <b>[X Speed]</b> 0 0 0 <b>[Y Speed]</b> 0 0 0 1
