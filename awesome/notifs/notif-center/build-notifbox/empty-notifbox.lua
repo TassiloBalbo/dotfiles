@@ -23,7 +23,7 @@ local empty_notifbox = wibox.widget {
 			nil
 		},
 		{
-			markup = '<span strikethrough="true">You have no life</span>\nYou have no notifs!',
+			markup = 'No notifications.',
 			font = 'JetBrains Mono 10',
 			align = 'center',
 			valign = 'center',

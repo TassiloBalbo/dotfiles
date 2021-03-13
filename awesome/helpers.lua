@@ -11,6 +11,14 @@ local naughty = require("naughty")
 
 local helpers = {}
 
+-- Spotify
+
+function helpers.sendToSpotify(command)
+	return function ()
+		awful.util.spawn_with_shell("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player." .. command)
+	end
+end
+
 -- Resize gaps on the fly
 
 helpers.resize_gaps = function(amt)

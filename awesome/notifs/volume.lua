@@ -16,16 +16,16 @@ icons.init(icon_theme)
 local volume_icon = icons.volume
 
 local active_color_1 = {
-    type = 'linear',
-    from = {0, 0},
-    to = {200, 50}, -- replace with w,h later
-    stops = {{0, beautiful.xcolor6}, {0.50, beautiful.xcolor4}}
+	type = 'linear',
+	from = {0, 0},
+	to = {200, 50}, -- replace with w,h later
+	stops = {{0, beautiful.xcolor6}, {0.50, beautiful.xcolor4}}
 }
 
 -- create the volume_adjust component
 local volume_adjust = wibox({
     screen = awful.screen.focused(),
-    x = screen.geometry.width / 2 - width / 2,
+    x = screen.geometry.width / 2 - width / 2, --
     y = screen.geometry.height / 2 - height / 2 + 300,
     width = width,
     height = height,
